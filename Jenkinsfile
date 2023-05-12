@@ -1,6 +1,6 @@
 pipeline {
 environment {
-imagename = "tbank-0.0.1-SNAPSHOT.jar"
+imagename = "tbank-0.0.1-snapshot.jar"
 registryCredential = 'dockerhubaccess'
 dockerImage = ''
 }
