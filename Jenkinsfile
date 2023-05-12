@@ -1,6 +1,6 @@
 pipeline {
 environment {
-imagename = "tsi-poc/tbank-0.0.1-SNAPSHOT.jar"
+imagename = "tbank-0.0.1-SNAPSHOT.jar"
 registryCredential = 'dockerhubaccess'
 dockerImage = ''
 }
@@ -8,7 +8,7 @@ agent any
 stages {
 stage('Cloning Git') {
 steps {
-git([url: 'https://github.com/manoj-jena/tsi-poc.git', branch: 'main', credentialsId: 'githubaccess'])
+git([url: 'https://github.com/manoj-jena/tsipoc.git', branch: 'main', credentialsId: 'githubaccess'])
 }
 }
 stage('Building image') {
