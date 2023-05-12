@@ -5,7 +5,7 @@ FROM openjdk:18
 WORKDIR /app
 
 # Copy the jar file into our app
-COPY . /app
+COPY /home/tsi/tsipoc /app
 
 # Exposing port 8080
 EXPOSE 8080
