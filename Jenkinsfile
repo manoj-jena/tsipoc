@@ -8,7 +8,7 @@ agent any
 stages {
 stage('Cloning Git') {
 steps {
-git([url: 'https://github.com/manoj-jena/tsipoc.git', branch: 'main', credentialsId: 'githubaccess'])
+git([url: 'https://github.com/manoj-jena/tsipoc.git', branch: 'master', credentialsId: 'githubaccess'])
 }
 }
 stage('Building image') {
