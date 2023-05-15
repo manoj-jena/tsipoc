@@ -5,7 +5,7 @@ FROM openjdk:18
 WORKDIR /app
 
 # Copy the jar file into our app
-COPY /home/tsi/tsipoc/tbank-0.0.1-snapshot.jar /app
+COPY /target/tbank-0.0.1-snapshot.jar /app
 
 # Exposing port 8080
 EXPOSE 8080
