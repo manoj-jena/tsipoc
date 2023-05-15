@@ -1,0 +1,35 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-test-service
+spec:
+  selector:
+    app: flask-test-app
+  ports:
+  - protocol: "TCP"
+    port: 5000
+    targetPort: 5000
+  type: NodePort
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-test-app
+spec:
+  selector:
+    matchLabels:
+      app: app-test-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: app-test-app
+    spec:
+      containers:
+      - name: app-test-app
+        image: amitendra/techm_mihan:latest
+        ports:
+        - containerPort: 5000
